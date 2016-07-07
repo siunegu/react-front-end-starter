@@ -1,0 +1,37 @@
+/* Nav */
+.nav {
+	padding: 15px 0;
+	border-bottom: 1px solid #854ae3;
+
+	.nav-title {
+		font-family: $font-family;
+		letter-spacing: 0.15rem;
+		color: $base-orange;
+	}
+
+	.nav-items {   
+		border: 1px solid cyan;
+		display: flex;
+		.nav-item {
+			padding: 25px;
+			flex: 1;
+			display: flex;
+
+			.nav-item-title {			
+				color: $base-grey;
+				font-size: 0.9rem;
+				font-weight: 500;
+			}
+		}
+	}
+	
+	.nav-left {float: left;}
+	.nav-right {float: right;}
+
+	.glyphicon {
+		color: $base-orange;
+		padding-right: 10px;
+		flex: 1;
+	}
+}
+
