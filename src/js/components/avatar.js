@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// require('../../../img/avatar.jpg');
 
 class Avatar extends React.Component {
   constructor(args) {

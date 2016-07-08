@@ -72,7 +72,7 @@
 
 	    var _app2 = _interopRequireDefault(_app);
 
-	    __webpack_require__(262);
+	    __webpack_require__(265);
 
 	    function _interopRequireDefault(obj) {
 	      return obj && obj.__esModule ? obj : { default: obj };
@@ -21073,6 +21073,18 @@
 
 			var _nav2 = _interopRequireDefault(_nav);
 
+			var _jumbovisionContainer = __webpack_require__(262);
+
+			var _jumbovisionContainer2 = _interopRequireDefault(_jumbovisionContainer);
+
+			var _breadcrumbContainer = __webpack_require__(263);
+
+			var _breadcrumbContainer2 = _interopRequireDefault(_breadcrumbContainer);
+
+			var _breadcrumb = __webpack_require__(264);
+
+			var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
+
 			function _interopRequireDefault(obj) {
 				return obj && obj.__esModule ? obj : { default: obj };
 			}
@@ -21088,7 +21100,7 @@
 				(0, _createClass3.default)(App, [{
 					key: 'render',
 					value: function render() {
-						return _react2.default.createElement('div', { className: 'container' }, _react2.default.createElement(_nav2.default, null));
+						return _react2.default.createElement('div', { className: 'container' }, _react2.default.createElement(_nav2.default, null), _react2.default.createElement(_breadcrumbContainer2.default, null, _react2.default.createElement(_breadcrumb2.default, null)), _react2.default.createElement(_jumbovisionContainer2.default, null));
 					}
 				}]);
 				return App;
@@ -23066,8 +23078,6 @@
 	      return obj && obj.__esModule ? obj : { default: obj };
 	    }
 
-	    // require('../../../img/avatar.jpg');
-
 	    var Avatar = function (_React$Component) {
 	      (0, _inherits3.default)(Avatar, _React$Component);
 
@@ -23119,13 +23129,312 @@
 /* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
+	"use strict";
+
+	/* REACT HOT LOADER */if (false) {
+	    (function () {
+	        var ReactHotAPI = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-api/modules/index.js"),
+	            RootInstanceProvider = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-loader/RootInstanceProvider.js"),
+	            ReactMount = require("react/lib/ReactMount"),
+	            React = require("react");module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () {
+	            return RootInstanceProvider.getRootInstances(ReactMount);
+	        }, React);
+	    })();
+	}try {
+	    (function () {
+
+	        'use strict';
+
+	        Object.defineProperty(exports, "__esModule", {
+	            value: true
+	        });
+
+	        var _getPrototypeOf = __webpack_require__(171);
+
+	        var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	        var _classCallCheck2 = __webpack_require__(197);
+
+	        var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	        var _createClass2 = __webpack_require__(198);
+
+	        var _createClass3 = _interopRequireDefault(_createClass2);
+
+	        var _possibleConstructorReturn2 = __webpack_require__(202);
+
+	        var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	        var _inherits2 = __webpack_require__(249);
+
+	        var _inherits3 = _interopRequireDefault(_inherits2);
+
+	        var _react = __webpack_require__(1);
+
+	        var _react2 = _interopRequireDefault(_react);
+
+	        var _reactDom = __webpack_require__(33);
+
+	        var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	        function _interopRequireDefault(obj) {
+	            return obj && obj.__esModule ? obj : { default: obj };
+	        }
+
+	        var JumboVisionContainer = function (_React$Component) {
+	            (0, _inherits3.default)(JumboVisionContainer, _React$Component);
+
+	            function JumboVisionContainer() {
+	                (0, _classCallCheck3.default)(this, JumboVisionContainer);
+	                return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(JumboVisionContainer).apply(this, arguments));
+	            }
+
+	            (0, _createClass3.default)(JumboVisionContainer, [{
+	                key: 'render',
+	                value: function render() {
+	                    return _react2.default.createElement('div', { className: 'jumbovision' }, _react2.default.createElement('div', { className: 'display-4' }, 'How attractive are you?'), this.props.children);
+	                }
+	            }]);
+	            return JumboVisionContainer;
+	        }(_react2.default.Component);
+
+	        exports.default = JumboVisionContainer;
+
+	        /* REACT HOT LOADER */
+	    }).call(undefined);
+	} finally {
+	    if (false) {
+	        (function () {
+	            var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false;if (module.exports && module.makeHot) {
+	                var makeExportsHot = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-loader/makeExportsHot.js");if (makeExportsHot(module, require("react"))) {
+	                    foundReactClasses = true;
+	                }var shouldAcceptModule = true && foundReactClasses;if (shouldAcceptModule) {
+	                    module.hot.accept(function (err) {
+	                        if (err) {
+	                            console.error("Cannot not apply hot update to " + "jumbovision-container.js" + ": " + err.message);
+	                        }
+	                    });
+	                }
+	            }module.hot.dispose(function (data) {
+	                data.makeHot = module.makeHot;data.foundReactClasses = foundReactClasses;
+	            });
+	        })();
+	    }
+	}
+
+/***/ },
+/* 263 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	/* REACT HOT LOADER */if (false) {
+	    (function () {
+	        var ReactHotAPI = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-api/modules/index.js"),
+	            RootInstanceProvider = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-loader/RootInstanceProvider.js"),
+	            ReactMount = require("react/lib/ReactMount"),
+	            React = require("react");module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () {
+	            return RootInstanceProvider.getRootInstances(ReactMount);
+	        }, React);
+	    })();
+	}try {
+	    (function () {
+
+	        'use strict';
+
+	        Object.defineProperty(exports, "__esModule", {
+	            value: true
+	        });
+
+	        var _getPrototypeOf = __webpack_require__(171);
+
+	        var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	        var _classCallCheck2 = __webpack_require__(197);
+
+	        var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	        var _createClass2 = __webpack_require__(198);
+
+	        var _createClass3 = _interopRequireDefault(_createClass2);
+
+	        var _possibleConstructorReturn2 = __webpack_require__(202);
+
+	        var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	        var _inherits2 = __webpack_require__(249);
+
+	        var _inherits3 = _interopRequireDefault(_inherits2);
+
+	        var _react = __webpack_require__(1);
+
+	        var _react2 = _interopRequireDefault(_react);
+
+	        var _reactDom = __webpack_require__(33);
+
+	        var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	        function _interopRequireDefault(obj) {
+	            return obj && obj.__esModule ? obj : { default: obj };
+	        }
+
+	        var BreadCrumbContainer = function (_React$Component) {
+	            (0, _inherits3.default)(BreadCrumbContainer, _React$Component);
+
+	            function BreadCrumbContainer() {
+	                (0, _classCallCheck3.default)(this, BreadCrumbContainer);
+	                return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(BreadCrumbContainer).apply(this, arguments));
+	            }
+
+	            (0, _createClass3.default)(BreadCrumbContainer, [{
+	                key: 'render',
+	                value: function render() {
+	                    return _react2.default.createElement('div', { className: 'breadcrumb-container' }, this.props.children);
+	                }
+	            }]);
+	            return BreadCrumbContainer;
+	        }(_react2.default.Component);
+
+	        exports.default = BreadCrumbContainer;
+
+	        /* REACT HOT LOADER */
+	    }).call(undefined);
+	} finally {
+	    if (false) {
+	        (function () {
+	            var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false;if (module.exports && module.makeHot) {
+	                var makeExportsHot = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-loader/makeExportsHot.js");if (makeExportsHot(module, require("react"))) {
+	                    foundReactClasses = true;
+	                }var shouldAcceptModule = true && foundReactClasses;if (shouldAcceptModule) {
+	                    module.hot.accept(function (err) {
+	                        if (err) {
+	                            console.error("Cannot not apply hot update to " + "breadcrumb-container.js" + ": " + err.message);
+	                        }
+	                    });
+	                }
+	            }module.hot.dispose(function (data) {
+	                data.makeHot = module.makeHot;data.foundReactClasses = foundReactClasses;
+	            });
+	        })();
+	    }
+	}
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	/* REACT HOT LOADER */if (false) {
+	    (function () {
+	        var ReactHotAPI = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-api/modules/index.js"),
+	            RootInstanceProvider = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-loader/RootInstanceProvider.js"),
+	            ReactMount = require("react/lib/ReactMount"),
+	            React = require("react");module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () {
+	            return RootInstanceProvider.getRootInstances(ReactMount);
+	        }, React);
+	    })();
+	}try {
+	    (function () {
+
+	        'use strict';
+
+	        Object.defineProperty(exports, "__esModule", {
+	            value: true
+	        });
+
+	        var _getPrototypeOf = __webpack_require__(171);
+
+	        var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	        var _classCallCheck2 = __webpack_require__(197);
+
+	        var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	        var _createClass2 = __webpack_require__(198);
+
+	        var _createClass3 = _interopRequireDefault(_createClass2);
+
+	        var _possibleConstructorReturn2 = __webpack_require__(202);
+
+	        var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	        var _inherits2 = __webpack_require__(249);
+
+	        var _inherits3 = _interopRequireDefault(_inherits2);
+
+	        var _react = __webpack_require__(1);
+
+	        var _react2 = _interopRequireDefault(_react);
+
+	        var _reactDom = __webpack_require__(33);
+
+	        var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	        function _interopRequireDefault(obj) {
+	            return obj && obj.__esModule ? obj : { default: obj };
+	        }
+
+	        var BreadCrumb = function (_React$Component) {
+	            (0, _inherits3.default)(BreadCrumb, _React$Component);
+
+	            function BreadCrumb(props) {
+	                (0, _classCallCheck3.default)(this, BreadCrumb);
+
+	                var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(BreadCrumb).call(this, props));
+
+	                _this.state = {
+	                    parent: 'Home',
+	                    child: 'My test',
+	                    grandChild: 'Attractiveness'
+	                };
+	                return _this;
+	            }
+
+	            (0, _createClass3.default)(BreadCrumb, [{
+	                key: 'render',
+	                value: function render() {
+	                    return _react2.default.createElement('div', { className: 'breadcrumb' }, _react2.default.createElement('a', { href: '' }, this.state.parent), _react2.default.createElement('span', { className: 'glyphicon glyphicon-chevron-right' }), _react2.default.createElement('a', { href: '' }, this.state.child), _react2.default.createElement('span', { className: 'glyphicon glyphicon-chevron-right' }), _react2.default.createElement('a', { href: '' }, this.state.grandChild));
+	                }
+	            }]);
+	            return BreadCrumb;
+	        }(_react2.default.Component);
+
+	        exports.default = BreadCrumb;
+
+	        /* REACT HOT LOADER */
+	    }).call(undefined);
+	} finally {
+	    if (false) {
+	        (function () {
+	            var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false;if (module.exports && module.makeHot) {
+	                var makeExportsHot = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-loader/makeExportsHot.js");if (makeExportsHot(module, require("react"))) {
+	                    foundReactClasses = true;
+	                }var shouldAcceptModule = true && foundReactClasses;if (shouldAcceptModule) {
+	                    module.hot.accept(function (err) {
+	                        if (err) {
+	                            console.error("Cannot not apply hot update to " + "breadcrumb.js" + ": " + err.message);
+	                        }
+	                    });
+	                }
+	            }module.hot.dispose(function (data) {
+	                data.makeHot = module.makeHot;data.foundReactClasses = foundReactClasses;
+	            });
+	        })();
+	    }
+	}
+
+/***/ },
+/* 265 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(263);
+	var content = __webpack_require__(266);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(265)(content, {});
+	var update = __webpack_require__(268)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -23142,21 +23451,21 @@
 	}
 
 /***/ },
-/* 263 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(264)();
+	exports = module.exports = __webpack_require__(267)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "/* Nav */\n.nav {\n  padding: 15px 25px;\n  background-color: #fff;\n  border-bottom: 1px solid #854ae3;\n}\n\n.nav .nav-title {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.15rem;\n  color: #f96428;\n}\n\n.nav .nav-items .nav-item {\n  padding-left: 3.5rem;\n  display: inline-block;\n}\n\n.nav .nav-items .nav-item .nav-item-title {\n  display: inline-block;\n  color: #a1a1a1;\n  font-size: 0.85rem;\n  font-weight: 500;\n  padding-left: 0.5rem;\n}\n\n.nav .nav-left {\n  float: left;\n}\n\n.nav .nav-right {\n  float: right;\n}\n\n.nav .avatar {\n  display: inline-block;\n  vertical-align: bottom;\n}\n\n.nav .glyphicon {\n  color: #f96428;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.nav .glyphicon:last-child() {\n  padding-right: 0;\n}\n\n.avatar {\n  border-radius: 100%;\n  height: 1.5rem;\n  width: 1.5rem;\n  overflow: hidden;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.avatar img {\n  width: 100%;\n  height: 100%;\n}\n\n.search-box {\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-bottom: 1px solid grey;\n  outline: none;\n  width: 0;\n  transition: all 0.25s ease-in-out;\n}\n\n.search-box:focus {\n  width: 8rem;\n  outline: none;\n}\n\n/* General */\nhtml, body {\n  background: #f9f9f9;\n}\n\n/* Content Blocks */\n.content-row {\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, "/* Nav */\n.nav {\n  padding: 15px 25px;\n  background-color: #fff;\n}\n\n.nav .nav-title {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.15rem;\n  color: #f96428;\n}\n\n.nav .nav-items .nav-item {\n  padding-left: 3.5rem;\n  display: inline-block;\n}\n\n.nav .nav-items .nav-item .nav-item-title {\n  display: inline-block;\n  color: #a1a1a1;\n  font-size: 0.85rem;\n  font-weight: 500;\n  padding-left: 0.5rem;\n}\n\n.nav .nav-left {\n  float: left;\n}\n\n.nav .nav-right {\n  float: right;\n}\n\n.nav .avatar {\n  display: inline-block;\n  vertical-align: bottom;\n}\n\n.nav .glyphicon {\n  color: #f96428;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.nav .glyphicon:last-child() {\n  padding-right: 0;\n}\n\n.avatar {\n  border-radius: 100%;\n  height: 1.5rem;\n  width: 1.5rem;\n  overflow: hidden;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.avatar img {\n  width: 100%;\n  height: 100%;\n}\n\n.search-box {\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-bottom: 1px solid grey;\n  outline: none;\n  width: 0;\n  transition: all 0.25s ease-in-out;\n}\n\n.search-box:focus {\n  width: 8rem;\n  outline: none;\n}\n\n.jumbovision {\n  background: #7734e2;\n  min-height: 16rem;\n  width: 100%;\n  box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.75);\n  position: relative;\n  /* \n\t * overrides for Bootstrap \n\t */\n}\n\n.jumbovision .display-4 {\n  color: #fff;\n  font-weight: 300;\n  text-align: center;\n  /* Absolute Centering method */\n  width: 50%;\n  height: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  margin: auto;\n}\n\n.breadcrumb-container {\n  background: #6c2fcb;\n  width: 100%;\n  padding: 15px 25px;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n\n.breadcrumb {\n  /* \n\t * Overrides for Bootstrap \n\t * begin \n\t */\n  border-radius: 0;\n  background: transparent;\n  margin-bottom: 0;\n  padding: 0;\n}\n\n.breadcrumb .glyphicon {\n  color: #bb9af0;\n  padding: 0 0.6375rem;\n  font-size: 0.6375rem;\n}\n\n.breadcrumb a {\n  color: #bb9af0;\n  font-size: 0.85rem;\n  font-weight: 400;\n  transition: color 0.25s ease-in-out;\n}\n\n.breadcrumb a:hover {\n  text-decoration: none;\n  color: #fff;\n}\n\n/* General */\nhtml, body {\n  background: #f9f9f9;\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n}\n\n/* Content Blocks */\n.content-row {\n  width: 100%;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 264 */
+/* 267 */
 /***/ function(module, exports) {
 
 	/*
@@ -23212,7 +23521,7 @@
 
 
 /***/ },
-/* 265 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

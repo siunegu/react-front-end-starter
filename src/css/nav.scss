@@ -1,8 +1,7 @@
 /* Nav */
 .nav {
-	padding: 15px 25px;
+	padding: $container-padding;
 	background-color: #fff;
-	border-bottom: 1px solid #854ae3;
 
 	.nav-title {
 		font-family: $font-family;
@@ -19,7 +18,7 @@
 			.nav-item-title {			
 				display: inline-block;
 				color: $base-grey;
-				font-size: 0.85rem;
+				font-size: $font-regular;
 				font-weight: 500;
 				padding-left: 0.5rem;
 			}

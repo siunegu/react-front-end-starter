@@ -2,11 +2,14 @@
 @import 'nav';
 @import 'avatar';
 @import 'search';
+@import 'jumbovision';
+@import 'breadcrumb';
 
 
 /* General */
 html, body {
 	background: #f9f9f9;
+	font-family: $font-family;
 }
 
 /* Content Blocks */
