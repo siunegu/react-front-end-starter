@@ -6,13 +6,16 @@ class Avatar extends React.Component {
   constructor(args) {
     super();
     this.state = { 
-
+      user: 'My Test'
     }   
   }
   render() {
     return (
-      <div className="avatar">
-        <img src="https://www.placecage.com/300/200" />
+      <div className="avatar-wrapper">
+        <div className="avatar">
+          <img src="https://www.placecage.com/300/300" />
+        </div>
+        <div className="nav-item-title">{this.state.user}</div>
       </div> 
     )
   }

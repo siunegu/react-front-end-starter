@@ -22915,6 +22915,26 @@
 				value: true
 			});
 
+			var _getPrototypeOf = __webpack_require__(171);
+
+			var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+			var _classCallCheck2 = __webpack_require__(197);
+
+			var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+			var _createClass2 = __webpack_require__(198);
+
+			var _createClass3 = _interopRequireDefault(_createClass2);
+
+			var _possibleConstructorReturn2 = __webpack_require__(202);
+
+			var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+			var _inherits2 = __webpack_require__(249);
+
+			var _inherits3 = _interopRequireDefault(_inherits2);
+
 			var _react = __webpack_require__(1);
 
 			var _react2 = _interopRequireDefault(_react);
@@ -22927,9 +22947,44 @@
 				return obj && obj.__esModule ? obj : { default: obj };
 			}
 
-			var Search = function Search() {
-				return _react2.default.createElement('span', { className: 'nav-item' }, _react2.default.createElement('input', { type: 'text' }), _react2.default.createElement('span', { className: 'glyphicon glyphicon-search', 'aria-hidden': 'true' }));
-			};
+			var Search = function (_React$Component) {
+				(0, _inherits3.default)(Search, _React$Component);
+
+				function Search(args) {
+					(0, _classCallCheck3.default)(this, Search);
+
+					var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Search).call(this));
+
+					_this.state = {
+						on: false
+					};
+					_this.toggleOnOff = _this.toggleOnOff.bind(_this);
+					return _this;
+				}
+
+				(0, _createClass3.default)(Search, [{
+					key: 'componentDidUpdate',
+					value: function componentDidUpdate() {
+						this.state.on ? this._input.focus() : this._input.blur();
+					}
+				}, {
+					key: 'toggleOnOff',
+					value: function toggleOnOff() {
+						this.setState({ on: !this.state.on });
+					}
+				}, {
+					key: 'render',
+					value: function render() {
+						var _this2 = this;
+
+						return _react2.default.createElement('span', { className: 'nav-item' }, _react2.default.createElement('input', { className: 'search-box', ref: function ref(c) {
+								return _this2._input = c;
+							}, type: 'text' }), _react2.default.createElement('span', { className: 'search-button glyphicon glyphicon-search', 'aria-hidden': 'true',
+							onClick: this.toggleOnOff }));
+					}
+				}]);
+				return Search;
+			}(_react2.default.Component);
 
 			exports.default = Search;
 
@@ -23021,14 +23076,16 @@
 
 	        var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Avatar).call(this));
 
-	        _this.state = {};
+	        _this.state = {
+	          user: 'My Test'
+	        };
 	        return _this;
 	      }
 
 	      (0, _createClass3.default)(Avatar, [{
 	        key: 'render',
 	        value: function render() {
-	          return _react2.default.createElement('div', { className: 'avatar' }, _react2.default.createElement('img', { src: 'https://www.placecage.com/300/200' }));
+	          return _react2.default.createElement('div', { className: 'avatar-wrapper' }, _react2.default.createElement('div', { className: 'avatar' }, _react2.default.createElement('img', { src: 'https://www.placecage.com/300/300' })), _react2.default.createElement('div', { className: 'nav-item-title' }, this.state.user));
 	        }
 	      }]);
 	      return Avatar;
@@ -23093,7 +23150,7 @@
 
 
 	// module
-	exports.push([module.id, "/* Nav */\n.nav {\n  padding: 15px 0;\n  border-bottom: 1px solid #854ae3;\n}\n\n.nav .nav-title {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.15rem;\n  color: #f96428;\n}\n\n.nav .nav-items {\n  border: 1px solid cyan;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.nav .nav-items .nav-item {\n  padding: 25px;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.nav .nav-items .nav-item .nav-item-title {\n  color: #b2b2b2;\n  font-size: 0.9rem;\n  font-weight: 500;\n}\n\n.nav .nav-left {\n  float: left;\n}\n\n.nav .nav-right {\n  float: right;\n}\n\n.nav .glyphicon {\n  color: #f96428;\n  padding-right: 10px;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.avatar {\n  border-radius: 100%;\n  height: 2rem;\n  width: 2rem;\n  overflow: hidden;\n}\n\n.avatar img {\n  width: 100%;\n  height: 100%;\n}\n\n/* General */\nhtml {\n  background: #FFF;\n}\n\n/* Content Blocks */\n.content-row {\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, "/* Nav */\n.nav {\n  padding: 15px 25px;\n  background-color: #fff;\n  border-bottom: 1px solid #854ae3;\n}\n\n.nav .nav-title {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.15rem;\n  color: #f96428;\n}\n\n.nav .nav-items .nav-item {\n  padding-left: 3.5rem;\n  display: inline-block;\n}\n\n.nav .nav-items .nav-item .nav-item-title {\n  display: inline-block;\n  color: #a1a1a1;\n  font-size: 0.85rem;\n  font-weight: 500;\n  padding-left: 0.5rem;\n}\n\n.nav .nav-left {\n  float: left;\n}\n\n.nav .nav-right {\n  float: right;\n}\n\n.nav .avatar {\n  display: inline-block;\n  vertical-align: bottom;\n}\n\n.nav .glyphicon {\n  color: #f96428;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.nav .glyphicon:last-child() {\n  padding-right: 0;\n}\n\n.avatar {\n  border-radius: 100%;\n  height: 1.5rem;\n  width: 1.5rem;\n  overflow: hidden;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.avatar img {\n  width: 100%;\n  height: 100%;\n}\n\n.search-box {\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-bottom: 1px solid grey;\n  outline: none;\n  width: 0;\n  transition: all 0.25s ease-in-out;\n}\n\n.search-box:focus {\n  width: 8rem;\n  outline: none;\n}\n\n/* General */\nhtml, body {\n  background: #f9f9f9;\n}\n\n/* Content Blocks */\n.content-row {\n  width: 100%;\n}\n", ""]);
 
 	// exports
 

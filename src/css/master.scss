@@ -1,10 +1,12 @@
 @import 'variables';
 @import 'nav';
 @import 'avatar';
+@import 'search';
+
 
 /* General */
-html {
-	background: #FFF;
+html, body {
+	background: #f9f9f9;
 }
 
 /* Content Blocks */
