@@ -1,0 +1,17 @@
+.filterlist-container {
+	padding: $container-padding;
+}
+
+.filterlist-header {
+	padding-bottom: $font-small;
+	border-bottom: 1px solid $light-grey;
+}
+
+.filterlist-content {
+	margin-top: $font-small;
+}
+
+.filterlist-title {
+	color: $base-amethyst;
+	font-weight: 600;
+}

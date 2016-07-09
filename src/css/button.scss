@@ -1,0 +1,20 @@
+.show-menu-button {
+	background: $deep-amethyst;
+	border-radius: 4px;
+	border: none;
+	color: #fff;
+	padding: 4px 12px;
+	font-size: $font-regular;
+	transition: box-shadow 0.25s ease-in-out;
+
+	&:hover {
+		box-shadow: $small-shadow;
+	}
+
+	.glyphicon {
+		color: #fff;	
+		padding-right: $font-regular;
+		vertical-align: middle;
+	}
+	
+}

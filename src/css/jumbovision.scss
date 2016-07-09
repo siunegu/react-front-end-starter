@@ -2,7 +2,7 @@
 	background: $base-amethyst;
 	min-height: 16rem;
 	width: 100%;
-	box-shadow: 0px 4px 24px -8px rgba(0,0,0,0.75);
+	box-shadow: $small-shadow;
 	position: relative;
 	/* 
 	 * overrides for Bootstrap 
@@ -21,5 +21,13 @@
 		bottom: 0;
 		left: 0;
 		margin: auto;
+	}
+	/* 
+	 * Show menu button 
+	 */
+	.show-menu-button {
+		position: absolute;
+		bottom: 15px;
+		left: 25px;
 	}
 }

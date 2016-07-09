@@ -1,10 +1,3 @@
-.search-button {	
-
-	&.glyphicon {
-		// padding: 0 0.5rem;
-	}
-}
-
 .search-box {
 	border-top: 0;
 	border-left: 0;
@@ -20,5 +13,17 @@
 	}
 	&.on {
 	}
+}
 
+/* Dropdown version 
+ * - Could use Select2 to replace.
+ */
+.search-dropdown {
+	font-size: $font-regular;
+	border: none;
+	border-radius: 4px;
+	background: $light-grey;
+	padding: 4px 16px;
+	width: 100%;
+	outline: none;
 }
