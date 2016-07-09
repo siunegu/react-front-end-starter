@@ -8,10 +8,23 @@ class RowContainer extends React.Component {
     render() {
         return (
         	<div className="row-container">
-        		{this.props.children}
+        		<div className="row-title">
+        			{this.props.title}
+        		</div>
+        		<div className="row-content">
+	        		{this.props.children}
+        		</div>
         	</div>
       	)
     }
+}
+
+RowContainer.propTypes = {
+	title: React.PropTypes.string
+}
+
+RowContainer.defaultProps = {
+	title: 'Hand Title'
 }
 
 export default RowContainer;

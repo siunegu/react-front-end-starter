@@ -5,8 +5,10 @@ import JumboVisionContainer from '../containers/jumbovision-container';
 import BreadCrumbContainer from '../containers/breadcrumb-container';
 import BreadCrumb from './breadcrumb';
 import DashBoardContainer from '../containers/dashboard-container';
+import RowContainer from '../containers/row-container';
 import SideBarContainer from '../containers/sidebar-container';
 import FilterList from './filter-list';
+import CardContainer from '../containers/card-container';
 
 class App extends React.Component {
 	constructor(args) {
@@ -44,7 +46,23 @@ class App extends React.Component {
 							title="Industry" 
 							placeholder="Search by driver name"/>							
 					</SideBarContainer>
-					<DashBoardContainer>					
+					<DashBoardContainer>		
+						<RowContainer
+							title="General" >
+							<CardContainer cardName="Test">
+							</CardContainer>
+							<CardContainer cardName="New">
+							</CardContainer>							
+							<CardContainer cardName="Facebook">
+							</CardContainer>							
+						</RowContainer>
+						<RowContainer
+							title="Hand Title">
+							<CardContainer cardName="Gender">
+							</CardContainer>
+							<CardContainer cardName="Test">
+							</CardContainer>												
+						</RowContainer>	
 					</DashBoardContainer>
 				</div>
 			</div>

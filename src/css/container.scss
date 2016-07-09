@@ -1,5 +1,51 @@
+/* Main Dashboard content */
 .main-content {
-	border: 1px solid $deep-amethyst;
 	display: flex;
 	margin-top: 25px;
+}
+
+/* Row Elements - with Titles */
+.row-container {
+	min-height: 12rem; // temporary
+	padding: $container-padding;
+}
+
+.row-title {
+	font-weight: 400;
+  color: $dark-grey;
+  display: flex;
+  flex: 1;
+
+	&:after {
+		content: '';
+		background: $base-grey;
+		margin-left: $font-regular;
+    display: inline-flex;
+    height: 2px;
+    width: 100%;
+    flex: 1;
+    align-self: center;
+	}
+}
+
+.row-content {
+	margin-top: $font-regular;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Card Elements */
+.card-container {
+	border-radius: 2px;
+	box-shadow: $close-shadow;
+}
+
+/* Columns 1, 2, 3 */
+.card-column {
+	flex: 2;
+	min-height: 300px;
+	margin-right: 2.5%;
+	&:last-child {
+		margin-right: 0;
+	}
 }

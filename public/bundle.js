@@ -72,7 +72,7 @@
 
 	    var _app2 = _interopRequireDefault(_app);
 
-	    __webpack_require__(268);
+	    __webpack_require__(270);
 
 	    function _interopRequireDefault(obj) {
 	      return obj && obj.__esModule ? obj : { default: obj };
@@ -21089,13 +21089,21 @@
 
 			var _dashboardContainer2 = _interopRequireDefault(_dashboardContainer);
 
-			var _sidebarContainer = __webpack_require__(266);
+			var _rowContainer = __webpack_require__(266);
+
+			var _rowContainer2 = _interopRequireDefault(_rowContainer);
+
+			var _sidebarContainer = __webpack_require__(267);
 
 			var _sidebarContainer2 = _interopRequireDefault(_sidebarContainer);
 
-			var _filterList = __webpack_require__(267);
+			var _filterList = __webpack_require__(268);
 
 			var _filterList2 = _interopRequireDefault(_filterList);
+
+			var _cardContainer = __webpack_require__(269);
+
+			var _cardContainer2 = _interopRequireDefault(_cardContainer);
 
 			function _interopRequireDefault(obj) {
 				return obj && obj.__esModule ? obj : { default: obj };
@@ -21135,7 +21143,9 @@
 							title: 'Driver',
 							placeholder: 'Search by driver name' }), _react2.default.createElement(_filterList2.default, {
 							title: 'Industry',
-							placeholder: 'Search by driver name' })), _react2.default.createElement(_dashboardContainer2.default, null)));
+							placeholder: 'Search by driver name' })), _react2.default.createElement(_dashboardContainer2.default, null, _react2.default.createElement(_rowContainer2.default, {
+							title: 'General' }, _react2.default.createElement(_cardContainer2.default, { cardName: 'Test' }), _react2.default.createElement(_cardContainer2.default, { cardName: 'New' }), _react2.default.createElement(_cardContainer2.default, { cardName: 'Facebook' })), _react2.default.createElement(_rowContainer2.default, {
+							title: 'Hand Title' }, _react2.default.createElement(_cardContainer2.default, { cardName: 'Gender' }), _react2.default.createElement(_cardContainer2.default, { cardName: 'Test' })))));
 					}
 				}]);
 				return App;
@@ -23604,6 +23614,111 @@
 	            return obj && obj.__esModule ? obj : { default: obj };
 	        }
 
+	        var RowContainer = function (_React$Component) {
+	            (0, _inherits3.default)(RowContainer, _React$Component);
+
+	            function RowContainer(props) {
+	                (0, _classCallCheck3.default)(this, RowContainer);
+
+	                var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(RowContainer).call(this, props));
+
+	                _this.displayName = 'RowContainer';
+	                return _this;
+	            }
+
+	            (0, _createClass3.default)(RowContainer, [{
+	                key: 'render',
+	                value: function render() {
+	                    return _react2.default.createElement('div', { className: 'row-container' }, _react2.default.createElement('div', { className: 'row-title' }, this.props.title), _react2.default.createElement('div', { className: 'row-content' }, this.props.children));
+	                }
+	            }]);
+	            return RowContainer;
+	        }(_react2.default.Component);
+
+	        RowContainer.propTypes = {
+	            title: _react2.default.PropTypes.string
+	        };
+
+	        RowContainer.defaultProps = {
+	            title: 'Hand Title'
+	        };
+
+	        exports.default = RowContainer;
+
+	        /* REACT HOT LOADER */
+	    }).call(undefined);
+	} finally {
+	    if (false) {
+	        (function () {
+	            var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false;if (module.exports && module.makeHot) {
+	                var makeExportsHot = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-loader/makeExportsHot.js");if (makeExportsHot(module, require("react"))) {
+	                    foundReactClasses = true;
+	                }var shouldAcceptModule = true && foundReactClasses;if (shouldAcceptModule) {
+	                    module.hot.accept(function (err) {
+	                        if (err) {
+	                            console.error("Cannot not apply hot update to " + "row-container.js" + ": " + err.message);
+	                        }
+	                    });
+	                }
+	            }module.hot.dispose(function (data) {
+	                data.makeHot = module.makeHot;data.foundReactClasses = foundReactClasses;
+	            });
+	        })();
+	    }
+	}
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	/* REACT HOT LOADER */if (false) {
+	    (function () {
+	        var ReactHotAPI = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-api/modules/index.js"),
+	            RootInstanceProvider = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-loader/RootInstanceProvider.js"),
+	            ReactMount = require("react/lib/ReactMount"),
+	            React = require("react");module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () {
+	            return RootInstanceProvider.getRootInstances(ReactMount);
+	        }, React);
+	    })();
+	}try {
+	    (function () {
+
+	        'use strict';
+
+	        Object.defineProperty(exports, "__esModule", {
+	            value: true
+	        });
+
+	        var _getPrototypeOf = __webpack_require__(171);
+
+	        var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	        var _classCallCheck2 = __webpack_require__(197);
+
+	        var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	        var _createClass2 = __webpack_require__(198);
+
+	        var _createClass3 = _interopRequireDefault(_createClass2);
+
+	        var _possibleConstructorReturn2 = __webpack_require__(202);
+
+	        var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	        var _inherits2 = __webpack_require__(249);
+
+	        var _inherits3 = _interopRequireDefault(_inherits2);
+
+	        var _react = __webpack_require__(1);
+
+	        var _react2 = _interopRequireDefault(_react);
+
+	        function _interopRequireDefault(obj) {
+	            return obj && obj.__esModule ? obj : { default: obj };
+	        }
+
 	        var SideBarContainer = function (_React$Component) {
 	            (0, _inherits3.default)(SideBarContainer, _React$Component);
 
@@ -23672,7 +23787,7 @@
 	}
 
 /***/ },
-/* 267 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23779,16 +23894,117 @@
 	}
 
 /***/ },
-/* 268 */
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	/* REACT HOT LOADER */if (false) {
+	    (function () {
+	        var ReactHotAPI = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-api/modules/index.js"),
+	            RootInstanceProvider = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-loader/RootInstanceProvider.js"),
+	            ReactMount = require("react/lib/ReactMount"),
+	            React = require("react");module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () {
+	            return RootInstanceProvider.getRootInstances(ReactMount);
+	        }, React);
+	    })();
+	}try {
+	    (function () {
+
+	        'use strict';
+
+	        Object.defineProperty(exports, "__esModule", {
+	            value: true
+	        });
+
+	        var _getPrototypeOf = __webpack_require__(171);
+
+	        var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	        var _classCallCheck2 = __webpack_require__(197);
+
+	        var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	        var _createClass2 = __webpack_require__(198);
+
+	        var _createClass3 = _interopRequireDefault(_createClass2);
+
+	        var _possibleConstructorReturn2 = __webpack_require__(202);
+
+	        var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	        var _inherits2 = __webpack_require__(249);
+
+	        var _inherits3 = _interopRequireDefault(_inherits2);
+
+	        var _react = __webpack_require__(1);
+
+	        var _react2 = _interopRequireDefault(_react);
+
+	        function _interopRequireDefault(obj) {
+	            return obj && obj.__esModule ? obj : { default: obj };
+	        }
+
+	        var CardContainer = function (_React$Component) {
+	            (0, _inherits3.default)(CardContainer, _React$Component);
+
+	            function CardContainer(props) {
+	                (0, _classCallCheck3.default)(this, CardContainer);
+	                return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(CardContainer).call(this, props));
+	            }
+
+	            (0, _createClass3.default)(CardContainer, [{
+	                key: 'render',
+	                value: function render() {
+	                    return _react2.default.createElement('div', { ref: this.props.cardName, className: 'card-container card-column' }, this.props.children);
+	                }
+	            }]);
+	            return CardContainer;
+	        }(_react2.default.Component);
+
+	        CardContainer.propTypes = {
+	            cardName: _react2.default.PropTypes.string
+	        };
+
+	        CardContainer.defaultProps = {
+	            cardName: 'default-card'
+	        };
+
+	        exports.default = CardContainer;
+
+	        /* REACT HOT LOADER */
+	    }).call(undefined);
+	} finally {
+	    if (false) {
+	        (function () {
+	            var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false;if (module.exports && module.makeHot) {
+	                var makeExportsHot = require("/Users/equalsbrackets/Documents/kartel/front-end-dev/node_modules/react-hot-loader/makeExportsHot.js");if (makeExportsHot(module, require("react"))) {
+	                    foundReactClasses = true;
+	                }var shouldAcceptModule = true && foundReactClasses;if (shouldAcceptModule) {
+	                    module.hot.accept(function (err) {
+	                        if (err) {
+	                            console.error("Cannot not apply hot update to " + "card-container.js" + ": " + err.message);
+	                        }
+	                    });
+	                }
+	            }module.hot.dispose(function (data) {
+	                data.makeHot = module.makeHot;data.foundReactClasses = foundReactClasses;
+	            });
+	        })();
+	    }
+	}
+
+/***/ },
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(269);
+	var content = __webpack_require__(271);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(271)(content, {});
+	var update = __webpack_require__(273)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -23805,21 +24021,21 @@
 	}
 
 /***/ },
-/* 269 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(270)();
+	exports = module.exports = __webpack_require__(272)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".main-content {\n  border: 1px solid #6c2fcb;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  margin-top: 25px;\n}\n\n/* Nav */\n.nav {\n  padding: 15px 25px;\n  background-color: #fff;\n}\n\n.nav .nav-title {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.15rem;\n  color: #f96428;\n}\n\n.nav .nav-items .nav-item {\n  padding-left: 3.5rem;\n  display: inline-block;\n}\n\n.nav .nav-items .nav-item .nav-item-title {\n  display: inline-block;\n  color: #a1a1a1;\n  font-size: 0.85rem;\n  font-weight: 500;\n  padding-left: 0.5rem;\n}\n\n.nav .nav-left {\n  float: left;\n}\n\n.nav .nav-right {\n  float: right;\n}\n\n.nav .avatar {\n  display: inline-block;\n  vertical-align: bottom;\n}\n\n.nav .glyphicon {\n  color: #f96428;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.nav .glyphicon:last-child() {\n  padding-right: 0;\n}\n\n.avatar {\n  border-radius: 100%;\n  height: 1.5rem;\n  width: 1.5rem;\n  overflow: hidden;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.avatar img {\n  width: 100%;\n  height: 100%;\n}\n\n.search-box {\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-bottom: 1px solid grey;\n  outline: none;\n  width: 0;\n  transition: all 0.25s ease-in-out;\n}\n\n.search-box:focus {\n  width: 8rem;\n  outline: none;\n}\n\n/* Dropdown version \n * - Could use Select2 to replace.\n */\n.search-dropdown {\n  font-size: 0.85rem;\n  border: none;\n  border-radius: 4px;\n  background: rgba(161, 161, 161, 0.25);\n  padding: 4px 16px;\n  width: 100%;\n  outline: none;\n}\n\n.jumbovision {\n  background: #7734e2;\n  min-height: 16rem;\n  width: 100%;\n  box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.75);\n  position: relative;\n  /* \n\t * overrides for Bootstrap \n\t */\n  /* \n\t * Show menu button \n\t */\n}\n\n.jumbovision .display-4 {\n  color: #fff;\n  font-weight: 200;\n  font-size: 2.4rem;\n  text-align: center;\n  /* Absolute Centering method */\n  width: 50%;\n  height: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  margin: auto;\n}\n\n.jumbovision .show-menu-button {\n  position: absolute;\n  bottom: 15px;\n  left: 25px;\n}\n\n.breadcrumb-container {\n  background: #6c2fcb;\n  width: 100%;\n  padding: 15px 25px;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n\n.breadcrumb {\n  /* \n\t * Overrides for Bootstrap \n\t * begin \n\t */\n  border-radius: 0;\n  background: transparent;\n  margin-bottom: 0;\n  padding: 0;\n}\n\n.breadcrumb .glyphicon {\n  color: #bb9af0;\n  padding: 0 0.6375rem;\n  font-size: 0.6375rem;\n}\n\n.breadcrumb a {\n  color: #bb9af0;\n  font-size: 0.85rem;\n  font-weight: 400;\n  transition: color 0.25s ease-in-out;\n}\n\n.breadcrumb a:hover {\n  text-decoration: none;\n  color: #fff;\n}\n\n.show-menu-button {\n  background: #6c2fcb;\n  border-radius: 4px;\n  border: none;\n  color: #fff;\n  padding: 4px 12px;\n  font-size: 0.85rem;\n  transition: box-shadow 0.25s ease-in-out;\n}\n\n.show-menu-button:hover {\n  box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.75);\n}\n\n.show-menu-button .glyphicon {\n  color: #fff;\n  padding-right: 0.85rem;\n  vertical-align: middle;\n}\n\n.dashboard-container {\n  border: 1px solid #f96428;\n  max-width: 100%;\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n\n.sidebar-container {\n  border: 1px solid #7734e2;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  max-width: 25%;\n  overflow: hidden;\n  transition: -webkit-flex 0.75s ease-in-out;\n  transition: flex 0.75s ease-in-out;\n  transition: flex 0.75s ease-in-out, -webkit-flex 0.75s ease-in-out, -ms-flex 0.75s ease-in-out;\n}\n\n.filterlist-container {\n  padding: 15px 25px;\n}\n\n.filterlist-header {\n  padding-bottom: 0.6375rem;\n  border-bottom: 1px solid rgba(161, 161, 161, 0.25);\n}\n\n.filterlist-content {\n  margin-top: 0.6375rem;\n}\n\n.filterlist-title {\n  color: #7734e2;\n  font-weight: 600;\n}\n\n/* General */\nhtml, body {\n  background: #f9f9f9;\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n}\n\n/* Content Blocks */\n.content-row {\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, "/* Main Dashboard content */\n.main-content {\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  margin-top: 25px;\n}\n\n/* Row Elements - with Titles */\n.row-container {\n  min-height: 12rem;\n  padding: 15px 25px;\n}\n\n.row-title {\n  font-weight: 400;\n  color: #595759;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.row-title:after {\n  content: '';\n  background: #a1a1a1;\n  margin-left: 0.85rem;\n  display: -webkit-inline-flex;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  height: 2px;\n  width: 100%;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.row-content {\n  margin-top: 0.85rem;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-justify-content: space-between;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n\n/* Card Elements */\n.card-container {\n  border-radius: 2px;\n  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.25);\n}\n\n/* Columns 1, 2, 3 */\n.card-column {\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n  min-height: 300px;\n  margin-right: 2.5%;\n}\n\n.card-column:last-child {\n  margin-right: 0;\n}\n\n/* Nav */\n.nav {\n  padding: 15px 25px;\n  background-color: #fff;\n}\n\n.nav .nav-title {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.15rem;\n  color: #f96428;\n}\n\n.nav .nav-items .nav-item {\n  padding-left: 3.5rem;\n  display: inline-block;\n}\n\n.nav .nav-items .nav-item .nav-item-title {\n  display: inline-block;\n  color: #a1a1a1;\n  font-size: 0.85rem;\n  font-weight: 500;\n  padding-left: 0.5rem;\n}\n\n.nav .nav-left {\n  float: left;\n}\n\n.nav .nav-right {\n  float: right;\n}\n\n.nav .avatar {\n  display: inline-block;\n  vertical-align: bottom;\n}\n\n.nav .glyphicon {\n  color: #f96428;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.nav .glyphicon:last-child() {\n  padding-right: 0;\n}\n\n.avatar {\n  border-radius: 100%;\n  height: 1.5rem;\n  width: 1.5rem;\n  overflow: hidden;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.avatar img {\n  width: 100%;\n  height: 100%;\n}\n\n.search-box {\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-bottom: 1px solid grey;\n  outline: none;\n  width: 0;\n  transition: all 0.25s ease-in-out;\n}\n\n.search-box:focus {\n  width: 8rem;\n  outline: none;\n}\n\n/* Dropdown version \n * - Could use Select2 to replace.\n */\n.search-dropdown {\n  font-size: 0.85rem;\n  border: none;\n  border-radius: 4px;\n  background: rgba(161, 161, 161, 0.25);\n  padding: 4px 16px;\n  width: 100%;\n  outline: none;\n}\n\n.jumbovision {\n  background: #7734e2;\n  min-height: 16rem;\n  width: 100%;\n  box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.75);\n  position: relative;\n  /* \n\t * overrides for Bootstrap \n\t */\n  /* \n\t * Show menu button \n\t */\n}\n\n.jumbovision .display-4 {\n  color: #fff;\n  font-weight: 200;\n  font-size: 2.4rem;\n  text-align: center;\n  /* Absolute Centering method */\n  width: 50%;\n  height: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  margin: auto;\n}\n\n.jumbovision .show-menu-button {\n  position: absolute;\n  bottom: 15px;\n  left: 25px;\n}\n\n.breadcrumb-container {\n  background: #6c2fcb;\n  width: 100%;\n  padding: 15px 25px;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n\n.breadcrumb {\n  /* \n\t * Overrides for Bootstrap \n\t * begin \n\t */\n  border-radius: 0;\n  background: transparent;\n  margin-bottom: 0;\n  padding: 0;\n}\n\n.breadcrumb .glyphicon {\n  color: #bb9af0;\n  padding: 0 0.6375rem;\n  font-size: 0.6375rem;\n}\n\n.breadcrumb a {\n  color: #bb9af0;\n  font-size: 0.85rem;\n  font-weight: 400;\n  transition: color 0.25s ease-in-out;\n}\n\n.breadcrumb a:hover {\n  text-decoration: none;\n  color: #fff;\n}\n\n.show-menu-button {\n  background: #6c2fcb;\n  border-radius: 4px;\n  border: none;\n  color: #fff;\n  padding: 4px 12px;\n  font-size: 0.85rem;\n  transition: box-shadow 0.25s ease-in-out;\n}\n\n.show-menu-button:hover {\n  box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.75);\n}\n\n.show-menu-button .glyphicon {\n  color: #fff;\n  padding-right: 0.85rem;\n  vertical-align: middle;\n}\n\n.dashboard-container {\n  max-width: 100%;\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n\n.sidebar-container {\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  max-width: 25%;\n  overflow: hidden;\n  transition: -webkit-flex 0.75s ease-in-out;\n  transition: flex 0.75s ease-in-out;\n  transition: flex 0.75s ease-in-out, -webkit-flex 0.75s ease-in-out, -ms-flex 0.75s ease-in-out;\n}\n\n.filterlist-container {\n  padding: 15px 25px;\n}\n\n.filterlist-header,\n.filterlist-content {\n  padding-bottom: 0.6375rem;\n}\n\n.filterlist-header {\n  border-bottom: 1px solid rgba(161, 161, 161, 0.25);\n}\n\n.filterlist-content {\n  margin-top: 0.6375rem;\n}\n\n.filterlist-title {\n  color: #7734e2;\n  font-weight: 600;\n}\n\n/* General */\nhtml, body {\n  background: #f9f9f9;\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n}\n\n/* Content Blocks */\n.content-row {\n  width: 100%;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 270 */
+/* 272 */
 /***/ function(module, exports) {
 
 	/*
@@ -23875,7 +24091,7 @@
 
 
 /***/ },
-/* 271 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

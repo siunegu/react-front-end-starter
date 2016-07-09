@@ -2,8 +2,12 @@
 	padding: $container-padding;
 }
 
-.filterlist-header {
+.filterlist-header, 
+.filterlist-content {
 	padding-bottom: $font-small;
+}
+
+.filterlist-header {
 	border-bottom: 1px solid $light-grey;
 }
 
