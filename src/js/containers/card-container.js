@@ -5,8 +5,13 @@ class CardContainer extends React.Component {
         super(props);
     }
     render() {
+        let divStyles = {
+          backgroundColor: this.props.bgColor
+        }
         return (
-	        <div ref={this.props.cardName} className="card-container card-column">
+	        <div ref={this.props.cardName} 
+            className="card-container card-column"
+            style={divStyles}>
 	        	{this.props.children}
 	      	</div>
       	);

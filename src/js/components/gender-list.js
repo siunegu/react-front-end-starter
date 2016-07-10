@@ -17,6 +17,11 @@ class GenderList extends React.Component {
                 male: 3,
                 difference: 1
             }, {
+                employer: 'Volkswagen',
+                female: 5,
+                male: 4,
+                difference: 1
+            }, {
                 employer: 'Porsche',
                 female: 3,
                 male: 9,
@@ -26,6 +31,11 @@ class GenderList extends React.Component {
                 female: 4,
                 male: 3,
                 difference: 1
+            }, {
+                employer: 'Sony',
+                female: 32,
+                male: 25,
+                difference: 7
             }, ]
         }
         this.toggleSort = this.toggleSort.bind(this)

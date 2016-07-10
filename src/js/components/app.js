@@ -50,7 +50,7 @@ class App extends React.Component {
 					<DashBoardContainer>		
 						<RowContainer
 							title="General" >
-							<CardContainer cardName="Test">
+							<CardContainer cardName="Test" bgColor={'#ff8201'}>
 							</CardContainer>
 							<CardContainer cardName="New">
 							</CardContainer>							
