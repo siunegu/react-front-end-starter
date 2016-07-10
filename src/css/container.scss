@@ -1,7 +1,6 @@
-/* Main Dashboard content */
-.main-content {
-	display: flex;
-	margin-top: 25px;
+/* Content Blocks */
+.content-row {
+	width: 100%;
 }
 
 /* Row Elements - with Titles */
@@ -32,20 +31,4 @@
 	margin-top: $font-regular;
 	display: flex;
 	justify-content: space-between;
-}
-
-/* Card Elements */
-.card-container {
-	border-radius: 2px;
-	box-shadow: $close-shadow;
-}
-
-/* Columns 1, 2, 3 */
-.card-column {
-	flex: 2;
-	min-height: 300px;
-	margin-right: 2.5%;
-	&:last-child {
-		margin-right: 0;
-	}
 }

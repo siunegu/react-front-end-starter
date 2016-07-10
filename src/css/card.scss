@@ -1,0 +1,18 @@
+
+/* Card Elements */
+.card-container {
+	border-radius: 2px;
+	background: #fff;
+	box-shadow: $close-shadow;
+	padding: $container-padding;
+}
+
+/* Columns 1, 2, 3 */
+.card-column {
+	flex: 2;
+	min-height: 300px;
+	margin-right: 2.5%;
+	&:last-child {
+		margin-right: 0;
+	}
+}

@@ -1,0 +1,10 @@
+.table-row {
+	font-weight: 100;
+	color: $base-grey;
+	padding: $content-padding;
+	background-color: #fff;
+	border-top: 1px solid $light-grey;
+	&:nth-child(2n) {
+		background-color: $background-grey;
+	}
+}

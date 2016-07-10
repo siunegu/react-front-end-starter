@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'container';
+@import 'table';
 @import 'nav';
 @import 'avatar';
 @import 'search';
@@ -9,15 +10,11 @@
 @import 'dashboard';
 @import 'sidebar';
 @import 'filters';
+@import 'card';
 
 
 /* General */
 html, body {
-	background: #f9f9f9;
+	background: $background-grey;
 	font-family: $font-family;
-}
-
-/* Content Blocks */
-.content-row {
-	width: 100%;
 }

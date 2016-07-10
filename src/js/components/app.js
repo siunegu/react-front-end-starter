@@ -9,6 +9,7 @@ import RowContainer from '../containers/row-container';
 import SideBarContainer from '../containers/sidebar-container';
 import FilterList from './filter-list';
 import CardContainer from '../containers/card-container';
+import GenderList from './gender-list';
 
 class App extends React.Component {
 	constructor(args) {
@@ -59,6 +60,7 @@ class App extends React.Component {
 						<RowContainer
 							title="Hand Title">
 							<CardContainer cardName="Gender">
+								<GenderList/>
 							</CardContainer>
 							<CardContainer cardName="Test">
 							</CardContainer>												

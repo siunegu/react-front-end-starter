@@ -1,4 +1,12 @@
+/* Main Dashboard content */
+.main-content {
+	display: flex;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
 .dashboard-container {
 	max-width: 100%;
 	flex: 2;
 }
+
