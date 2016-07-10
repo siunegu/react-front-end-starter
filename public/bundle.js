@@ -24060,20 +24060,83 @@
 
 	                _this.displayName = 'GenderList';
 	                _this.state = {
-	                    data: [{ employer: 'BMW Group', Female: 1, Male: 1, difference: 0 }, { employer: 'Audi', Female: 2, Male: 3, difference: 1 }, { employer: 'Porsche', Female: 3, Male: 9, difference: 6 }, { employer: 'Google', Female: 4, Male: 3, difference: 1 }]
+	                    desc: true,
+	                    data: [{
+	                        employer: 'BMW Group',
+	                        female: 1,
+	                        male: 1,
+	                        difference: 0
+	                    }, {
+	                        employer: 'Audi',
+	                        female: 2,
+	                        male: 3,
+	                        difference: 1
+	                    }, {
+	                        employer: 'Porsche',
+	                        female: 3,
+	                        male: 9,
+	                        difference: 6
+	                    }, {
+	                        employer: 'Google',
+	                        female: 4,
+	                        male: 3,
+	                        difference: 1
+	                    }]
 	                };
+	                _this.toggleSort = _this.toggleSort.bind(_this);
 	                return _this;
 	            }
 
 	            (0, _createClass3.default)(GenderList, [{
+	                key: 'componentDidUpdate',
+	                value: function componentDidUpdate() {
+	                    console.log('sorted!');
+	                }
+	            }, {
+	                key: 'processSort',
+	                value: function processSort() {
+	                    console.log(this.state.desc);
+	                    var sorted = void 0;
+	                    switch (this.state.desc) {
+	                        case false:
+	                            sorted = this.state.data.sort(function (a, b) {
+	                                return a.female > b.female;
+	                            });
+	                            this.setState({
+	                                data: sorted
+	                            });
+	                            console.log('asc');
+	                            break;
+	                        case true:
+	                            sorted = this.state.data.sort(function (a, b) {
+	                                return a.female < b.female;
+	                            });
+	                            this.setState({
+	                                data: sorted
+	                            });
+	                            console.log('desc');
+	                            break;
+	                    }
+	                }
+	            }, {
+	                key: 'toggleSort',
+	                value: function toggleSort(e) {
+	                    this.setState({
+	                        desc: !this.state.desc
+	                    });
+	                    this.processSort();
+	                }
+	            }, {
 	                key: 'render',
 	                value: function render() {
 	                    var itemList = this.state.data.map(function (item, i) {
-	                        return _react2.default.createElement('div', {
-	                            key: item.employer,
-	                            className: 'table-row' }, item.employer);
+	                        return _react2.default.createElement('tr', { key: item.employer,
+	                            className: 'table-row' }, _react2.default.createElement('td', null, ' ', item.employer, ' '), _react2.default.createElement('td', null, item.female), _react2.default.createElement('td', null, ' ', item.male, ' '), _react2.default.createElement('td', null, ' '), _react2.default.createElement('td', null, ' ', item.male, ' '));
 	                    });
-	                    return _react2.default.createElement('div', null, itemList);
+	                    return _react2.default.createElement('table', null, _react2.default.createElement('tbody', null, _react2.default.createElement('tr', null, _react2.default.createElement('th', null, ' Employer '), _react2.default.createElement('th', null, 'Female', _react2.default.createElement('span', {
+	                        className: 'glyphicon glyphicon-chevron-down',
+	                        'data-filter': 'female',
+	                        onClick: this.toggleSort })), _react2.default.createElement('th', null, 'Male'), _react2.default.createElement('th', null, ' '), _react2.default.createElement('th', null, 'Difference')), itemList));
 	                }
 	            }]);
 	            return GenderList;
@@ -24138,7 +24201,7 @@
 
 
 	// module
-	exports.push([module.id, "/* Content Blocks */\n.content-row {\n  width: 100%;\n}\n\n/* Row Elements - with Titles */\n.row-container {\n  min-height: 12rem;\n  padding: 15px 25px;\n}\n\n.row-title {\n  font-weight: 400;\n  color: #595759;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.row-title:after {\n  content: '';\n  background: #a1a1a1;\n  margin-left: 0.85rem;\n  display: -webkit-inline-flex;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  height: 2px;\n  width: 100%;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.row-content {\n  margin-top: 0.85rem;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-justify-content: space-between;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n\n.table-row {\n  font-weight: 100;\n  color: #a1a1a1;\n  padding: 6px 12px;\n  background-color: #fff;\n  border-top: 1px solid rgba(161, 161, 161, 0.25);\n}\n\n.table-row:nth-child(2n) {\n  background-color: #f9f9f9;\n}\n\n/* Nav */\n.nav {\n  padding: 15px 25px;\n  background-color: #fff;\n}\n\n.nav .nav-title {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.15rem;\n  color: #f96428;\n}\n\n.nav .nav-items .nav-item {\n  padding-left: 3.5rem;\n  display: inline-block;\n}\n\n.nav .nav-items .nav-item .nav-item-title {\n  display: inline-block;\n  color: #a1a1a1;\n  font-size: 0.85rem;\n  font-weight: 500;\n  padding-left: 0.5rem;\n}\n\n.nav .nav-left {\n  float: left;\n}\n\n.nav .nav-right {\n  float: right;\n}\n\n.nav .avatar {\n  display: inline-block;\n  vertical-align: bottom;\n}\n\n.nav .glyphicon {\n  color: #f96428;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.nav .glyphicon:last-child() {\n  padding-right: 0;\n}\n\n.avatar {\n  border-radius: 100%;\n  height: 1.5rem;\n  width: 1.5rem;\n  overflow: hidden;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.avatar img {\n  width: 100%;\n  height: 100%;\n}\n\n.search-box {\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-bottom: 1px solid grey;\n  outline: none;\n  width: 0;\n  transition: all 0.25s ease-in-out;\n}\n\n.search-box:focus {\n  width: 8rem;\n  outline: none;\n}\n\n/* Dropdown version \n * - Could use Select2 to replace.\n */\n.search-dropdown {\n  font-size: 0.85rem;\n  border: none;\n  border-radius: 4px;\n  background: rgba(161, 161, 161, 0.25);\n  padding: 4px 16px;\n  width: 100%;\n  outline: none;\n}\n\n.jumbovision {\n  background: #7734e2;\n  min-height: 16rem;\n  width: 100%;\n  box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.75);\n  position: relative;\n  /* \n\t * overrides for Bootstrap \n\t */\n  /* \n\t * Show menu button \n\t */\n}\n\n.jumbovision .display-4 {\n  color: #fff;\n  font-weight: 200;\n  font-size: 2.4rem;\n  text-align: center;\n  /* Absolute Centering method */\n  width: 50%;\n  height: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  margin: auto;\n}\n\n.jumbovision .show-menu-button {\n  position: absolute;\n  bottom: 15px;\n  left: 25px;\n}\n\n.breadcrumb-container {\n  background: #6c2fcb;\n  width: 100%;\n  padding: 15px 25px;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n\n.breadcrumb {\n  /* \n\t * Overrides for Bootstrap \n\t * begin \n\t */\n  border-radius: 0;\n  background: transparent;\n  margin-bottom: 0;\n  padding: 0;\n}\n\n.breadcrumb .glyphicon {\n  color: #bb9af0;\n  padding: 0 0.6375rem;\n  font-size: 0.6375rem;\n}\n\n.breadcrumb a {\n  color: #bb9af0;\n  font-size: 0.85rem;\n  font-weight: 400;\n  transition: color 0.25s ease-in-out;\n}\n\n.breadcrumb a:hover {\n  text-decoration: none;\n  color: #fff;\n}\n\n.show-menu-button {\n  background: #6c2fcb;\n  border-radius: 4px;\n  border: none;\n  color: #fff;\n  padding: 4px 12px;\n  font-size: 0.85rem;\n  transition: box-shadow 0.25s ease-in-out;\n}\n\n.show-menu-button:hover {\n  box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.75);\n}\n\n.show-menu-button .glyphicon {\n  color: #fff;\n  padding-right: 0.85rem;\n  vertical-align: middle;\n}\n\n/* Main Dashboard content */\n.main-content {\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  margin-top: 25px;\n  margin-bottom: 25px;\n}\n\n.dashboard-container {\n  max-width: 100%;\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n\n.sidebar-container {\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  max-width: 25%;\n  overflow: hidden;\n  transition: -webkit-flex 0.75s ease-in-out;\n  transition: flex 0.75s ease-in-out;\n  transition: flex 0.75s ease-in-out, -webkit-flex 0.75s ease-in-out, -ms-flex 0.75s ease-in-out;\n}\n\n.filterlist-container {\n  padding: 15px 25px;\n}\n\n.filterlist-header,\n.filterlist-content {\n  padding-bottom: 0.6375rem;\n}\n\n.filterlist-header {\n  border-bottom: 1px solid rgba(161, 161, 161, 0.25);\n}\n\n.filterlist-content {\n  margin-top: 0.6375rem;\n}\n\n.filterlist-title {\n  color: #7734e2;\n  font-weight: 600;\n}\n\n/* Card Elements */\n.card-container {\n  border-radius: 2px;\n  background: #fff;\n  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.25);\n  padding: 15px 25px;\n}\n\n/* Columns 1, 2, 3 */\n.card-column {\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n  min-height: 300px;\n  margin-right: 2.5%;\n}\n\n.card-column:last-child {\n  margin-right: 0;\n}\n\n/* General */\nhtml, body {\n  background: #f9f9f9;\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n}\n", ""]);
+	exports.push([module.id, "/* Content Blocks */\n.content-row {\n  width: 100%;\n}\n\n/* Row Elements - with Titles */\n.row-container {\n  min-height: 12rem;\n  padding: 15px 25px;\n}\n\n.row-title {\n  font-weight: 400;\n  color: #595759;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.row-title:after {\n  content: '';\n  background: #a1a1a1;\n  margin-left: 0.85rem;\n  display: -webkit-inline-flex;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  height: 2px;\n  width: 100%;\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.row-content {\n  margin-top: 0.85rem;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-justify-content: space-between;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n\ntable {\n  width: 100%;\n}\n\ntable tr th, table tr td {\n  padding: 6px 12px;\n  font-size: 0.86rem;\n}\n\ntable tr th {\n  text-align: left;\n}\n\ntable tr th:last-child {\n  text-align: right;\n}\n\ntable tr th .glyphicon {\n  padding-left: 0.6375rem;\n}\n\ntable tr td {\n  text-align: right;\n}\n\ntable tr td:first-child {\n  text-align: left;\n}\n\ntable .glyphicon {\n  display: inline;\n  font-size: 0.6375rem;\n}\n\n.table-row {\n  font-weight: 100;\n  color: #a1a1a1;\n  padding: 6px 12px;\n  background-color: #fff;\n  border-top: 1px solid rgba(161, 161, 161, 0.25);\n}\n\n.table-row:nth-child(2n) {\n  background-color: #f9f9f9;\n}\n\n/* Nav */\n.nav {\n  padding: 15px 25px;\n  background-color: #fff;\n}\n\n.nav .nav-title {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.15rem;\n  color: #f96428;\n}\n\n.nav .nav-items .nav-item {\n  padding-left: 3.5rem;\n  display: inline-block;\n}\n\n.nav .nav-items .nav-item .nav-item-title {\n  display: inline-block;\n  color: #a1a1a1;\n  font-size: 0.85rem;\n  font-weight: 500;\n  padding-left: 0.5rem;\n}\n\n.nav .nav-left {\n  float: left;\n}\n\n.nav .nav-right {\n  float: right;\n}\n\n.nav .avatar {\n  display: inline-block;\n  vertical-align: bottom;\n}\n\n.nav .glyphicon {\n  color: #f96428;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.nav .glyphicon:last-child() {\n  padding-right: 0;\n}\n\n.avatar {\n  border-radius: 100%;\n  height: 1.5rem;\n  width: 1.5rem;\n  overflow: hidden;\n  -webkit-align-self: center;\n      -ms-flex-item-align: center;\n          align-self: center;\n}\n\n.avatar img {\n  width: 100%;\n  height: 100%;\n}\n\n.search-box {\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-bottom: 1px solid grey;\n  outline: none;\n  width: 0;\n  transition: all 0.25s ease-in-out;\n}\n\n.search-box:focus {\n  width: 8rem;\n  outline: none;\n}\n\n/* Dropdown version \n * - Could use Select2 to replace.\n */\n.search-dropdown {\n  font-size: 0.85rem;\n  border: none;\n  border-radius: 4px;\n  background: rgba(161, 161, 161, 0.25);\n  padding: 4px 16px;\n  width: 100%;\n  outline: none;\n}\n\n.jumbovision {\n  background: #7734e2;\n  min-height: 16rem;\n  width: 100%;\n  box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.75);\n  position: relative;\n  /* \n\t * overrides for Bootstrap \n\t */\n  /* \n\t * Show menu button \n\t */\n}\n\n.jumbovision .display-4 {\n  color: #fff;\n  font-weight: 200;\n  font-size: 2.4rem;\n  text-align: center;\n  /* Absolute Centering method */\n  width: 50%;\n  height: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  margin: auto;\n}\n\n.jumbovision .show-menu-button {\n  position: absolute;\n  bottom: 15px;\n  left: 25px;\n}\n\n.breadcrumb-container {\n  background: #6c2fcb;\n  width: 100%;\n  padding: 15px 25px;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n\n.breadcrumb {\n  /* \n\t * Overrides for Bootstrap \n\t * begin \n\t */\n  border-radius: 0;\n  background: transparent;\n  margin-bottom: 0;\n  padding: 0;\n}\n\n.breadcrumb .glyphicon {\n  color: #bb9af0;\n  padding: 0 0.6375rem;\n  font-size: 0.6375rem;\n}\n\n.breadcrumb a {\n  color: #bb9af0;\n  font-size: 0.85rem;\n  font-weight: 400;\n  transition: color 0.25s ease-in-out;\n}\n\n.breadcrumb a:hover {\n  text-decoration: none;\n  color: #fff;\n}\n\n.show-menu-button {\n  background: #6c2fcb;\n  border-radius: 4px;\n  border: none;\n  color: #fff;\n  padding: 4px 12px;\n  font-size: 0.85rem;\n  transition: box-shadow 0.25s ease-in-out;\n}\n\n.show-menu-button:hover {\n  box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.75);\n}\n\n.show-menu-button .glyphicon {\n  color: #fff;\n  padding-right: 0.85rem;\n  vertical-align: middle;\n}\n\n/* Main Dashboard content */\n.main-content {\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  margin-top: 25px;\n  margin-bottom: 25px;\n}\n\n.dashboard-container {\n  max-width: 100%;\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n\n.sidebar-container {\n  -webkit-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  max-width: 25%;\n  overflow: hidden;\n  transition: -webkit-flex 0.75s ease-in-out;\n  transition: flex 0.75s ease-in-out;\n  transition: flex 0.75s ease-in-out, -webkit-flex 0.75s ease-in-out, -ms-flex 0.75s ease-in-out;\n}\n\n.filterlist-container {\n  padding: 15px 25px;\n}\n\n.filterlist-header,\n.filterlist-content {\n  padding-bottom: 0.6375rem;\n}\n\n.filterlist-header {\n  border-bottom: 1px solid rgba(161, 161, 161, 0.25);\n}\n\n.filterlist-content {\n  margin-top: 0.6375rem;\n}\n\n.filterlist-title {\n  color: #7734e2;\n  font-weight: 600;\n}\n\n/* Card Elements */\n.card-container {\n  border-radius: 2px;\n  background: #fff;\n  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.25);\n  padding: 15px 25px;\n}\n\n/* Columns 1, 2, 3 */\n.card-column {\n  -webkit-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n  min-height: 300px;\n  margin-right: 2.5%;\n}\n\n.card-column:last-child {\n  margin-right: 0;\n}\n\n/* General */\nhtml, body {\n  background: #f9f9f9;\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n}\n", ""]);
 
 	// exports
 

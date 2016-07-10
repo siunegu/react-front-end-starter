@@ -1,3 +1,32 @@
+table {
+	width: 100%;
+	tr {
+		th, td {
+			padding: $content-padding;
+			font-size: 0.86rem;
+		}
+		th {
+			text-align: left;
+			&:last-child {
+				text-align: right;
+			}
+			.glyphicon {
+				padding-left: $font-small;
+			}
+		}
+		td {
+			text-align: right;
+			&:first-child {
+				text-align: left;
+			}			
+		}
+	}
+	.glyphicon {
+		display: inline;
+		font-size: $font-small;
+	}
+}
+
 .table-row {
 	font-weight: 100;
 	color: $base-grey;
