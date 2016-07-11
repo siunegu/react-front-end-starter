@@ -15,6 +15,13 @@
 	}
 }
 
+.search-button {
+	cursor: pointer;
+	&:hover {
+		color: $base-amethyst;
+	}
+}
+
 /* Dropdown version 
  * - Could use Select2 to replace.
  */

@@ -44,6 +44,10 @@ class GenderList extends React.Component {
         console.log('sorted!')
     }
     processSort() {
+        /* note: 
+         * - change '.female' to access keys instead passed in 
+         *   as dataset from e.target element.
+         */
         console.log(this.state.desc)
         let sorted;
         switch (this.state.desc) {
@@ -75,41 +79,58 @@ class GenderList extends React.Component {
     }
     render() {
         let itemList = this.state.data.map((item, i) => {
-            return ( < tr key = {
-                    item.employer
-                }
+            let differenceWidth = `${(item.difference*2.25)}px`
+            let differenceLeft  = item.female > item.male ? `calc(${differenceWidth})` : `calc(-${differenceWidth})`
+            console.log(differenceLeft)
+            let divStyles = {
+                width: differenceWidth,
+                left:  differenceLeft
+            }
+            let className = item.female > item.male
+                            ? "difference-graph female"
+                            : "difference-graph male";
+            return ( 
+                <tr 
+                key={item.employer}
                 className = "table-row" >
-                < td > {
-                    item.employer
-                } < /td>
-		        		<td>{item.female}</td >
-                < td > {
-                    item.male
-                } < /td>	        		
-		        		<td> </td >
-                < td > {
-                    item.male
-                } < /td>	        		
-    	        	</tr >
+                    <td>{item.employer}</td>
+	        		<td className="female">{item.female}</td>
+                    <td className="male">{item.male}</td>
+            		<td className="difference-graph-wrapper"> 
+                        <span 
+                        style={divStyles}
+                        className={className}
+                        >
+                        </span>
+                    </td>
+                    <td> 
+                        {item.difference} 
+                    </td>	        		
+	        	</tr>
             )
         });
-        return ( < table >
-                < tbody >
-                < tr >
-                < th > Employer < /th>
-            			<th>Female 
+        return ( <table>
+                <tbody>
+                <tr>
+                <th> Employer </th>
+            			<th
+                        className="female">
+                            Female 
             				<span 
             					className="glyphicon glyphicon-chevron-down"
                                 data-filter="female"
-            					onClick={this.toggleSort}></span >
-                < /th>
-            			<th>Male</th >
-                < th > < /th>
-            			<th>Difference</th >
-                < /tr>
+            					onClick={this.toggleSort}></span>
+                </th>
+            			<th 
+                        className="male">
+                            Male
+                        </th>
+                <th> </th>
+            			<th>Difference</th>
+                </tr>
             		{itemList}
-                </tbody >
-                < /table>
+                </tbody>
+                </table>
       	)
     }
 }
