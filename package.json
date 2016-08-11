@@ -1,7 +1,7 @@
 {
-  "name": "Kartel",
+  "name": "get-started",
   "version": "1.0.0",
-  "description": "Front End Example",
+  "description": "Front End React Webpack",
   "main": "index.js",
   "scripts": {
     "webpack-watch": "webpack -w",
@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/next-best-alternative/front-end-developer.git"
+    "url": ""
   },
   "author": "Eugene Lai",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/next-best-alternative/front-end-developer",
+  "homepage": "",
   "dependencies": {
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-class-properties": "^6.10.2",
@@ -41,7 +41,6 @@
     "sass-loader": "^4.0.0",
     "source-map-loader": "^0.1.5",
     "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.1"
+    "url-loader": "^0.5.7"
   }
 }
