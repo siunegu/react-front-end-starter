@@ -6,7 +6,9 @@
   "scripts": {
     "webpack-watch": "webpack -w",
     "express-server": "node ./server",
-    "dev": "concurrently --kill-others \"npm run webpack-watch\" \"npm run express-server\""
+    "dev": "concurrently --kill-others \"npm run webpack-watch\" \"npm run express-server\"",
+    "start": "npm run express-server",
+    "build": "webpack --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
     "express": "^4.14.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
+    "react-router": "^2.6.1",
     "webpack": "^1.13.1"
   },
   "devDependencies": {
