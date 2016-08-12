@@ -2,7 +2,8 @@ import express from 'express';
 
 const app = express();
 
-app.use('/', express.static('public'));
+// app.use('/', express.static('public'));
+app.use(express.static(__dirname + '/public'))
 app.get('/api/', (req, res, next) => {
 	res.json({ message: 'welcome!' })
 })
